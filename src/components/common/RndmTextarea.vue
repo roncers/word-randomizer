@@ -7,7 +7,8 @@ const model = defineModel<string>()
 </script>
 <style lang="scss" scoped>
 textarea {
-  border: 0.1rem solid black;
+  border: 0.1rem solid DimGrey;
+  background-color: var(--color-primary);
   width: 100%;
   height: 150px;
 }

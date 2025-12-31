@@ -1,10 +1,12 @@
 <template>
-  <rndm-header>Randomize Phrase</rndm-header>
+  <rndm-header title="Randomize any phrase" ref="header" />
   <rndm-textarea v-model="input" />
-  <rndm-button @click="randomizeOutput(input)">Randomize</rndm-button>
-  <rndm-p>{{ output }}</rndm-p>
-  <rndm-p>Input words: {{ input.split(' ').length }}</rndm-p>
-  <rndm-p>Output words: {{ output.split(' ').length }}</rndm-p>
+  <rndm-button @click="randomizeOutput(input)">Randomize text</rndm-button>
+  <section v-if="output">
+    <h2>Output</h2>
+    <rndm-p>{{ output }}</rndm-p>
+    <rndm-button @click="console.log('coopy')">Copy output</rndm-button>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -15,10 +17,16 @@ import RndmP from './common/RndmP.vue'
 import { ref } from 'vue'
 import { randomizePhrase } from '../utils/functions/randomRelated'
 
+const input = ref<string>('')
+const output = ref<string>('')
+
 const randomizeOutput = (phrase: string) => {
+  randomizeElems()
   output.value = randomizePhrase(phrase)
 }
 
-const input = ref<string>('')
-const output = ref<string>('')
+const header = ref<InstanceType<typeof RndmHeader> | null>(null)
+const randomizeElems = (): void => {
+  header.value?.randomizeElems()
+}
 </script>

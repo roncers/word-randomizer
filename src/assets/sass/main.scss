@@ -1,7 +1,13 @@
 @use './abstracts/variables' as *;
 
-// :root {
-// }
+:root {
+  --main-padding: 4rem;
+  --main-font-size: 1.6rem;
+  --color-primary: thistle;
+  --color-secondary: #ffdfd3;
+  --color-tertiary: #dd7788;
+  --color-contrast: #1c1c1c;
+}
 
 * {
   margin: 0;
@@ -20,7 +26,11 @@ html {
 }
 
 body {
+  height: 100svh;
+  background: linear-gradient(to bottom, var(--color-secondary), white);
   font-family: $main-font;
+  padding: var(--main-padding);
+  font-size: var(--main-font-size);
 }
 
 button {

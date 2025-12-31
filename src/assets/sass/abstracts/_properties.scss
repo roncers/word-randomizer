@@ -1,0 +1,30 @@
+@property --main-padding {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 20px;
+}
+@property --main-font-size {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 16px;
+}
+@property --color-primary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
+@property --color-secondary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
+@property --color-tertiary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
+@property --color-contrast {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
