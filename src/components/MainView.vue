@@ -1,7 +1,10 @@
 <template>
   <rndm-header ref="header">Randomize any phrase</rndm-header>
-  <rndm-textarea v-model="input" />
-  <rndm-button @click="randomizeOutput(input)">Randomize text</rndm-button>
+  <section class="main-container">
+    <rndm-textarea v-model="input" />
+    <rndm-button @click="randomizeOutput(input)">Randomize text</rndm-button>
+  </section>
+
   <section v-if="output">
     <h2>Output</h2>
     <rndm-p>{{ output }}</rndm-p>
@@ -30,3 +33,11 @@ const randomizeElems = (): void => {
   header.value?.randomizeElems()
 }
 </script>
+
+<style lang="scss" scoped>
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+</style>

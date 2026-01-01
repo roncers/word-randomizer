@@ -66,6 +66,12 @@ onMounted(() => {
   enterCharAnimation(SHIFT, 'start')
 })
 
+const getRandomAnimationEase = (): string | undefined => {
+  const eases = ['back.out(1.7)', 'steps(20)']
+  const randomIndex = getRandomNumberTo(eases.length - 1)
+  return eases[randomIndex]
+}
+
 function enterCharAnimation(x: number, from: gsap.utils.DistributeConfig['from']): void {
   split = SplitText.create('.header', { type: 'chars' })
 
@@ -95,12 +101,6 @@ function exitCharAnimation(x: number, from: gsap.utils.DistributeConfig['from'])
       },
     })
   })
-}
-
-function getRandomAnimationEase(): string | undefined {
-  const eases = ['back.out(1.7)', 'steps(20)']
-  const randomIndex = getRandomNumberTo(eases.length - 1)
-  return eases[randomIndex]
 }
 
 onUnmounted(() => {

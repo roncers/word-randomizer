@@ -1,12 +1,25 @@
 @use './abstracts/variables' as *;
+@use './abstracts/properties';
 
 :root {
   --main-padding: 4rem;
   --main-font-size: 1.6rem;
-  --color-primary: thistle;
-  --color-secondary: #ffdfd3;
-  --color-tertiary: #dd7788;
-  --color-contrast: #1c1c1c;
+  --color-primary-rgb: var(--color-primary-r), var(--color-primary-g), var(--color-primary-b);
+  --color-primary: rgb(var(--color-primary-rgb));
+
+  --color-secondary-rgb:
+    var(--color-secondary-r), var(--color-secondary-g), var(--color-secondary-b);
+  --color-secondary: rgb(var(--color-secondary-rgb));
+
+  --color-tertiary-rgb: var(--color-tertiary-r), var(--color-tertiary-g), var(--color-tertiary-b);
+  --color-tertiary: rgb(var(--color-tertiary-rgb));
+
+  --color-contrast-rgb: var(--color-contrast-r), var(--color-contrast-g), var(--color-contrast-b);
+  --color-contrast: rgb(var(--color-contrast-rgb));
+
+  --color-quaternary-rgb:
+    var(--color-quaternary-r), var(--color-quaternary-g), var(--color-quaternary-b);
+  --color-quaternary: rgb(var(--color-quaternary-rgb));
 }
 
 * {
@@ -28,7 +41,11 @@ html {
 body {
   height: 100svh;
   overflow: hidden;
-  background: linear-gradient(to bottom, var(--color-secondary), white);
+  background: linear-gradient(
+    to bottom right,
+    var(--color-secondary),
+    rgba(var(--color-primary-rgb))
+  );
   font-family: $main-font;
   padding: var(--main-padding);
   font-size: var(--main-font-size);

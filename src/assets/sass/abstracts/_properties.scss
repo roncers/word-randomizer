@@ -1,3 +1,4 @@
+// sizes
 @property --main-padding {
   syntax: '<length>';
   inherits: true;
@@ -8,23 +9,131 @@
   inherits: true;
   initial-value: 16px;
 }
+
+// colors
 @property --color-primary {
   syntax: '<color>';
   inherits: true;
   initial-value: #000000;
+}
+@property --color-primary-r {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 216;
+}
+@property --color-primary-g {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 191;
+}
+@property --color-primary-b {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 216;
+}
+@property --color-primary-rgb {
+  syntax: '<integer>#';
+  inherits: true;
+  initial-value: 216, 191, 216;
 }
 @property --color-secondary {
   syntax: '<color>';
   inherits: true;
   initial-value: #000000;
 }
+@property --color-secondary-r {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 255;
+}
+@property --color-secondary-g {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 221;
+}
+@property --color-secondary-b {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 209;
+}
+@property --color-secondary-rgb {
+  syntax: '<integer>#';
+  inherits: true;
+  initial-value: 255, 221, 209;
+}
 @property --color-tertiary {
   syntax: '<color>';
   inherits: true;
   initial-value: #000000;
 }
+@property --color-tertiary-r {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 221;
+}
+@property --color-tertiary-g {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 119;
+}
+@property --color-tertiary-b {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 136;
+}
+@property --color-tertiary-rgb {
+  syntax: '<integer>#';
+  inherits: true;
+  initial-value: 221, 119, 136;
+}
+
 @property --color-contrast {
   syntax: '<color>';
   inherits: true;
   initial-value: #000000;
+}
+@property --color-contrast-r {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 28;
+}
+@property --color-contrast-g {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 28;
+}
+@property --color-contrast-b {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 28;
+}
+@property --color-contrast-rgb {
+  syntax: '<integer>#';
+  inherits: true;
+  initial-value: 28, 28, 28;
+}
+@property --color-quaternary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
+@property --color-quaternary-r {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 197;
+}
+@property --color-quaternary-g {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 190;
+}
+@property --color-quaternary-b {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 238;
+}
+@property --color-quaternary-rgb {
+  syntax: '<integer>#';
+  inherits: true;
+  initial-value: 197, 190, 238;
 }
