@@ -27,6 +27,7 @@ html {
 
 body {
   height: 100svh;
+  overflow: hidden;
   background: linear-gradient(to bottom, var(--color-secondary), white);
   font-family: $main-font;
   padding: var(--main-padding);

@@ -1,5 +1,5 @@
 <template>
-  <rndm-header title="Randomize any phrase" ref="header" />
+  <rndm-header ref="header">Randomize any phrase</rndm-header>
   <rndm-textarea v-model="input" />
   <rndm-button @click="randomizeOutput(input)">Randomize text</rndm-button>
   <section v-if="output">
