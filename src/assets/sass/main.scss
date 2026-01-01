@@ -41,14 +41,11 @@ html {
 body {
   height: 100svh;
   overflow: hidden;
-  background: linear-gradient(
-    to bottom right,
-    var(--color-secondary),
-    rgba(var(--color-primary-rgb))
-  );
+  background: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary));
   font-family: $main-font;
   padding: var(--main-padding);
   font-size: var(--main-font-size);
+  background-color: rgb(var(--color-secondary-rgb));
 }
 
 button {

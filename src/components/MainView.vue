@@ -1,7 +1,7 @@
 <template>
   <rndm-header ref="header">Randomize any phrase</rndm-header>
   <section class="main-container">
-    <rndm-textarea v-model="input" />
+    <rndm-textarea @keyup.enter="randomizeOutput(input)" ref="textarea" v-model="input" />
     <rndm-button @click="randomizeOutput(input)">Randomize text</rndm-button>
   </section>
 
@@ -29,8 +29,12 @@ const randomizeOutput = (phrase: string) => {
 }
 
 const header = ref<InstanceType<typeof RndmHeader> | null>(null)
+const textarea = ref<InstanceType<typeof RndmTextarea> | null>(null)
+const elems = [header, textarea]
 const randomizeElems = (): void => {
-  header.value?.randomizeElems()
+  for (const elem of elems) {
+    elem.value?.randomizeElems()
+  }
 }
 </script>
 
@@ -38,6 +42,6 @@ const randomizeElems = (): void => {
 .main-container {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 3rem;
 }
 </style>

@@ -110,7 +110,7 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .header {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-weight: 200;
   pointer-events: none;
   color: var(--color-contrast);
