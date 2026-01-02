@@ -2,6 +2,17 @@
 
 A creative web application built with Vue 3 that takes your text input and scrambles the order of the words. Perfect for creative writing prompts, games, or just for fun!
 
+<div align="center">
+
+### &rarr; &rarr; &rarr; &rarr; [Test the App Here](https://roncers.github.io/word-randomizer/) &larr; &larr; &larr; &larr;
+
+</div>
+
+## 📸 Demo
+
+<!-- Add a screenshot or GIF of your application here -->
+<!-- ![Demo Screenshot](path/to/screenshot.png) -->
+
 ## 🌟 Features
 
 - **Text Randomization**: Instantly shuffles the words in your input phrase.
@@ -14,8 +25,6 @@ A creative web application built with Vue 3 that takes your text input and scram
 - **Framework**: [Vue 3](https://vuejs.org/) (Script Setup + TypeScript)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: SCSS / Sass
-- **State Management**: [Pinia](https://pinia.vuejs.org/)
-- **Routing**: [Vue Router](https://router.vuejs.org/)
 - **Animations**: CSS Keyframes & [GSAP](https://greensock.com/gsap/)
 
 ## 🚀 Getting Started
@@ -32,7 +41,7 @@ Follow these steps to set up the project locally.
 1.  **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your-username/word-randomizer.git
+    git clone https://github.com/roncers/word-randomizer.git
     cd word-randomizer
     ```
 
@@ -64,8 +73,7 @@ Follow these steps to set up the project locally.
 src/
 ├── assets/          # Static assets and global styles (SCSS)
 ├── components/      # Vue components (MainView, common UI elements)
-├── router/          # Vue Router configuration
-├── stores/          # Pinia stores
+├── composable/      # Vue composables (useTitle, etc.)
 ├── utils/           # Helper functions (randomization logic)
 ├── App.vue          # Root component
 └── main.ts          # Application entry point
