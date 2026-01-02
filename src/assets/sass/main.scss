@@ -55,11 +55,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
   min-height: 100svh;
-  width: 100svw;
   overflow-x: hidden;
   overflow-y: hidden;
   background: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary));
