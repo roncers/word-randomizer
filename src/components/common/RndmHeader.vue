@@ -116,6 +116,7 @@ onUnmounted(() => {
   color: var(--color-contrast);
   letter-spacing: 0.2rem;
   word-spacing: 0.5rem;
+  text-align: var(--item-aligning);
 
   &--reverted {
     unicode-bidi: bidi-override;

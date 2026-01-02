@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import copyIcon from '@/assets/img/icons/copy-icon.svg?raw'
-import { useCopyText } from '@/composable/copy-text-value'
+import { useCopyText } from '@/composable/useCopyText'
 import { watch, ref, nextTick } from 'vue'
 
 const props = defineProps<{

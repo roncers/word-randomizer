@@ -16,6 +16,7 @@ import RndmButton from './common/RndmButton.vue'
 import OutputHandler from './OutputHandler.vue'
 import { ref, nextTick } from 'vue'
 import { randomizePhrase } from '../utils/functions/randomRelated'
+import { useTitle, type UseTitleReturn } from '@/composable/useTitle'
 
 const input = ref<string>('')
 const output = ref<string>('')
@@ -32,7 +33,8 @@ const randomizeOutput = async (phrase: string) => {
 const header = ref<InstanceType<typeof RndmHeader> | null>(null)
 const textarea = ref<InstanceType<typeof RndmTextarea> | null>(null)
 const button = ref<InstanceType<typeof RndmButton> | null>(null)
-const elems = [header, textarea, button]
+const pageTitle = ref<UseTitleReturn>(useTitle())
+const elems = [header, textarea, button, pageTitle]
 const randomizeElems = (): void => {
   for (const elem of elems) {
     elem.value?.randomizeElems()
