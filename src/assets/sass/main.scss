@@ -1,9 +1,24 @@
 @use './abstracts/variables' as *;
 @use './abstracts/properties';
+@use './abstracts/mixins' as *;
 
 :root {
   --main-padding: 4rem;
   --main-font-size: 1.6rem;
+  --header-font-size: 3rem;
+  --box-width: 60rem;
+  --item-aligning: baseline;
+  --output-aligning: flex-end;
+
+  @include respond(phone) {
+    --main-font-size: 1.4rem;
+    --header-font-size: 2.4rem;
+    --box-width: 30rem;
+    --main-padding: 2rem;
+    --item-aligning: center;
+    --output-aligning: center;
+  }
+
   --color-primary-rgb: var(--color-primary-r), var(--color-primary-g), var(--color-primary-b);
   --color-primary: rgb(var(--color-primary-rgb));
 
@@ -20,6 +35,9 @@
   --color-quaternary-rgb:
     var(--color-quaternary-r), var(--color-quaternary-g), var(--color-quaternary-b);
   --color-quaternary: rgb(var(--color-quaternary-rgb));
+
+  --color-quinary-rgb: var(--color-quinary-r), var(--color-quinary-g), var(--color-quinary-b);
+  --color-quinary: rgb(var(--color-quinary-rgb));
 }
 
 * {
@@ -36,16 +54,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
-  height: 100svh;
-  overflow: hidden;
+  min-height: 100svh;
+  width: 100svw;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background: linear-gradient(to bottom right, var(--color-secondary), var(--color-primary));
   font-family: $main-font;
   padding: var(--main-padding);
   font-size: var(--main-font-size);
-  background-color: rgb(var(--color-secondary-rgb));
 }
 
 button {
@@ -62,4 +82,24 @@ h1 {
   color: inherit;
   background: none;
   outline: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-tertiary);
+  border-radius: 0.8rem;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--color-tertiary) 80%, #000 20%);
 }

@@ -1,14 +1,11 @@
 <template>
   <rndm-header ref="header">Randomize any phrase</rndm-header>
-  <section class="main-container">
-    <rndm-textarea @keyup.enter="randomizeOutput(input)" ref="textarea" v-model="input" />
-    <rndm-button @click="randomizeOutput(input)">Randomize text</rndm-button>
-  </section>
-
-  <section v-if="output">
-    <h2>Output</h2>
-    <rndm-p>{{ output }}</rndm-p>
-    <rndm-button @click="console.log('coopy')">Copy output</rndm-button>
+  <section class="content">
+    <section class="main-container">
+      <rndm-textarea ref="textarea" v-model="input" />
+      <rndm-button ref="button" @click="randomizeOutput(input)">Randomize text</rndm-button>
+    </section>
+    <output-handler :output="output" />
   </section>
 </template>
 
@@ -16,21 +13,26 @@
 import RndmTextarea from './common/RndmTextarea.vue'
 import RndmHeader from './common/RndmHeader.vue'
 import RndmButton from './common/RndmButton.vue'
-import RndmP from './common/RndmP.vue'
-import { ref } from 'vue'
+import OutputHandler from './OutputHandler.vue'
+import { ref, nextTick } from 'vue'
 import { randomizePhrase } from '../utils/functions/randomRelated'
 
 const input = ref<string>('')
 const output = ref<string>('')
 
-const randomizeOutput = (phrase: string) => {
+const randomizeOutput = async (phrase: string) => {
   randomizeElems()
-  output.value = randomizePhrase(phrase)
+  output.value = ''
+  setTimeout(async () => {
+    await nextTick()
+    output.value = randomizePhrase(phrase)
+  }, 1100)
 }
 
 const header = ref<InstanceType<typeof RndmHeader> | null>(null)
 const textarea = ref<InstanceType<typeof RndmTextarea> | null>(null)
-const elems = [header, textarea]
+const button = ref<InstanceType<typeof RndmButton> | null>(null)
+const elems = [header, textarea, button]
 const randomizeElems = (): void => {
   for (const elem of elems) {
     elem.value?.randomizeElems()
@@ -42,6 +44,14 @@ const randomizeElems = (): void => {
 .main-container {
   display: flex;
   flex-direction: column;
+  align-items: var(--item-aligning);
   gap: 3rem;
+  margin-bottom: 3rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--item-aligning);
+  transition: all 1.1s ease;
 }
 </style>

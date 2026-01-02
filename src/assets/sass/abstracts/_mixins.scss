@@ -1,0 +1,39 @@
+@use 'sass:math';
+@use 'variables' as *;
+
+@mixin fade-in($Xdistance: 5rem, $Ydistance: 0rem) {
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translate($Xdistance, $Ydistance);
+    }
+    90% {
+      opacity: 0.8;
+      transform: translate(math.div(-$Xdistance, 12), math.div(-$Ydistance, 70));
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: $bp-phone) {
+      @content;
+    } //600px
+  } @else if $breakpoint == tab-port {
+    @media only screen and (max-width: $bp-tab-port) {
+      @content;
+    } //900px
+  } @else if $breakpoint == tab-land {
+    @media only screen and (max-width: $bp-tab-land) {
+      @content;
+    } //1200px
+  } @else if $breakpoint == big-desktop {
+    @media only screen and (min-width: $bp-big-desktop) {
+      @content;
+    } //1800px
+  }
+}

@@ -12,3 +12,13 @@ export const randomizePhrase = (input: string) => {
   }
   return ans.join(' ')
 }
+
+export const randomizeString = (input: string) => {
+  const randomIndex = getRandomNumberTo(input.length - 1)
+  const charCode = input.charCodeAt(randomIndex)
+  const randomCharNumber = getRandomNumberTo(255)
+  const newCharCode = (charCode + randomCharNumber) % 256
+  const ans = input.split('')
+  ans[randomIndex] = String.fromCharCode(newCharCode)
+  return ans.join('')
+}

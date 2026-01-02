@@ -45,10 +45,11 @@ defineExpose({ randomizeElems })
   min-height: 4.5rem;
   min-width: 10rem;
   max-width: 100%;
-  width: 60rem;
+  width: var(--box-width);
   height: 15rem;
   border-radius: 0.8rem;
   padding: 1.2rem;
+  resize: none;
   border: 2px solid color-mix(in srgb, var(--color-primary), var(--color-contrast) 7%);
 
   background: linear-gradient(
@@ -75,22 +76,13 @@ defineExpose({ randomizeElems })
     background-repeat: no-repeat;
     background-position: bottom right;
   }
+
   &--animated {
     animation: wiggle 2s $bouncing-animation;
   }
   &--fade-in {
+    @include fade-in(-70rem);
     animation: fade-in 2s ease-in-out;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 

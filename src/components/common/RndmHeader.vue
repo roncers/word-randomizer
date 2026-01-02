@@ -109,7 +109,7 @@ onUnmounted(() => {
 </script>
 <style lang="scss" scoped>
 .header {
-  font-size: 3rem;
+  font-size: var(--header-font-size);
   margin-bottom: 3rem;
   font-weight: 200;
   pointer-events: none;

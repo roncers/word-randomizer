@@ -1,48 +1,76 @@
-# word-randomizer
+# Word Randomizer
 
-This template should help get you started developing with Vue 3 in Vite.
+A creative web application built with Vue 3 that takes your text input and scrambles the order of the words. Perfect for creative writing prompts, games, or just for fun!
 
-## Recommended IDE Setup
+## 🌟 Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Text Randomization**: Instantly shuffles the words in your input phrase.
+- **Custom UI**: A unique, styled textarea with custom gradients and a custom resize handle.
+- **Animations**: Smooth fade-in and wiggle animations for a polished user experience.
+- **Interactive**: Real-time updates and visual feedback.
 
-## Recommended Browser Setup
+## 🛠️ Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Framework**: [Vue 3](https://vuejs.org/) (Script Setup + TypeScript)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: SCSS / Sass
+- **State Management**: [Pinia](https://pinia.vuejs.org/)
+- **Routing**: [Vue Router](https://router.vuejs.org/)
+- **Animations**: CSS Keyframes & [GSAP](https://greensock.com/gsap/)
 
-## Type Support for `.vue` Imports in TS
+## 🚀 Getting Started
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Follow these steps to set up the project locally.
 
-## Customize configuration
+### Prerequisites
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Node.js (v20.19.0 or higher recommended)
+- npm or yarn
 
-## Project Setup
+### Installation
 
-```sh
-npm install
+1.  **Clone the repository:**
+
+    ```sh
+    git clone https://github.com/your-username/word-randomizer.git
+    cd word-randomizer
+    ```
+
+2.  **Install dependencies:**
+
+    ```sh
+    npm install
+    ```
+
+3.  **Run the development server:**
+
+    ```sh
+    npm run dev
+    ```
+
+4.  Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 📜 Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the project for production.
+- `npm run preview`: Previews the production build locally.
+- `npm run lint`: Lints and fixes files.
+- `npm run format`: Formats code with Prettier.
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/          # Static assets and global styles (SCSS)
+├── components/      # Vue components (MainView, common UI elements)
+├── router/          # Vue Router configuration
+├── stores/          # Pinia stores
+├── utils/           # Helper functions (randomization logic)
+├── App.vue          # Root component
+└── main.ts          # Application entry point
 ```
 
-### Compile and Hot-Reload for Development
+## 🤝 Contributing
 
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Contributions are welcome! Please feel free to submit a Pull Request.

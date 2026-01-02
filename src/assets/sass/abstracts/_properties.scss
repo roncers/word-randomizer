@@ -10,6 +10,18 @@
   initial-value: 16px;
 }
 
+@property --header-font-size {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 16px;
+}
+
+@property --box-width {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 60px;
+}
+
 // colors
 @property --color-primary {
   syntax: '<color>';
@@ -136,4 +148,29 @@
   syntax: '<integer>#';
   inherits: true;
   initial-value: 197, 190, 238;
+}
+@property --color-quinary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #000000;
+}
+@property --color-quinary-r {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 250;
+}
+@property --color-quinary-g {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 235;
+}
+@property --color-quinary-b {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 215;
+}
+@property --color-quinary-rgb {
+  syntax: '<integer>#';
+  inherits: true;
+  initial-value: 250, 235, 215;
 }
