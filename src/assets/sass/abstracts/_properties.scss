@@ -186,3 +186,8 @@
   inherits: true;
   initial-value: 250, 235, 215;
 }
+@property --button-mix-color {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: red;
+}

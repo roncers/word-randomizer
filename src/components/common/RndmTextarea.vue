@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { randomizePhrase } from '@/utils/functions/randomRelated'
+import { randomizePhrase } from '@/utils/functions/random-related'
 const model = defineModel<string>()
 const animateTextarea = ref<boolean>(false)
 const isFadingIn = ref<boolean>(true)
@@ -62,6 +62,9 @@ defineExpose({ randomizeElems })
   background-position: center;
   /* Mixing var(--color-primary) with 20% black */
   background-color: var(--color-primary);
+  transition:
+    --color-quaternary-rgb 3s ease-in,
+    --color-primary 3s ease-in;
 
   &::placeholder {
     color: rgba(var(--color-contrast-rgb), 0.4);

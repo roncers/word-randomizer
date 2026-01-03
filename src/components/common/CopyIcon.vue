@@ -65,6 +65,7 @@ watch(
       right: v-bind('`calc( -${textWidth}px - .5rem)`');
       font-size: 1.2rem;
     }
+    pointer-events: none;
     top: 50%;
     transform: translateY(-50%);
     white-space: nowrap;

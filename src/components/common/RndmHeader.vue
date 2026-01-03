@@ -6,7 +6,7 @@
 import { ref, onMounted, onUnmounted, nextTick, computed } from 'vue'
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
-import { getRandomNumberTo } from '@/utils/functions/randomRelated'
+import { getRandomNumberTo } from '@/utils/functions/random-related'
 
 const SHIFT = 50
 

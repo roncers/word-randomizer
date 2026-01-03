@@ -22,7 +22,7 @@
 import { ref, watch, nextTick } from 'vue'
 import RndmP from './common/RndmP.vue'
 import CopyIcon from './common/CopyIcon.vue'
-import { randomizeString } from '@/utils/functions/randomRelated'
+import { randomizeString } from '@/utils/functions/random-related'
 
 const props = defineProps<{
   output: string
@@ -86,9 +86,12 @@ const copyToClipboard = () => {
     gap: 2rem;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.13),
-      rgba(var(--color-quinary-rgb), 0.5)
+      rgba(255, 255, 255, 0.164),
+      rgba(var(--color-quinary-rgb), 0.75)
     );
+    transition:
+      --color-quinary-rgb 3s ease-in,
+      --color-quinary 3s ease-in;
     width: var(--box-width);
     max-width: 100%;
     max-height: 20rem;

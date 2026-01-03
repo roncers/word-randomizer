@@ -15,7 +15,8 @@ import RndmHeader from './common/RndmHeader.vue'
 import RndmButton from './common/RndmButton.vue'
 import OutputHandler from './OutputHandler.vue'
 import { ref, nextTick } from 'vue'
-import { randomizePhrase } from '../utils/functions/randomRelated'
+import { randomizePhrase } from '../utils/functions/random-related'
+import { backgroundColorShift } from '@/utils/functions/color-related'
 import { useTitle, type UseTitleReturn } from '@/composable/useTitle'
 
 const input = ref<string>('')
@@ -37,6 +38,7 @@ const button = ref<InstanceType<typeof RndmButton> | null>(null)
 const pageTitle = ref<UseTitleReturn>(useTitle())
 const elems = [header, textarea, button, pageTitle]
 const randomizeElems = (): void => {
+  backgroundColorShift()
   for (const elem of elems) {
     elem.value?.randomizeElems()
   }

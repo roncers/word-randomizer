@@ -66,6 +66,9 @@ body {
   font-family: $main-font;
   padding: var(--main-padding);
   font-size: var(--main-font-size);
+  transition:
+    --color-secondary 1.5s ease,
+    --color-primary 1.5s ease;
 }
 
 button {

@@ -38,16 +38,17 @@ defineExpose({ randomizeElems, disabled })
   font-size: 2rem;
   padding: 0.5rem;
   transition: all 0.4s ease-in;
+  border-radius: 2px;
   @media (hover: hover) {
     &:hover {
-      background: red;
+      background: color-mix(in srgb, var(--color-tertiary) 60%, var(--button-mix-color) 33%);
     }
   }
   &:active {
-    background: crimson;
+    background: color-mix(in srgb, var(--color-tertiary) 60%, var(--button-mix-color) 66%);
   }
   &:disabled {
-    background-color: color-mix(in srgb, var(--color-tertiary) 50%, var(--color-contrast) 18%);
+    background-color: color-mix(in srgb, var(--color-tertiary) 60%, var(--color-contrast) 17%);
     cursor: default;
   }
   &--fading-in {

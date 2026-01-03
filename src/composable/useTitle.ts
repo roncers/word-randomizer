@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue'
-import { randomizeString } from '@/utils/functions/randomRelated'
+import { randomizeString } from '@/utils/functions/random-related'
 
 export type UseTitleReturn = {
   randomizeElems: () => void

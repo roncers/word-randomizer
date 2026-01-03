@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { randomizeString } from '@/utils/functions/randomRelated'
+import { randomizeString } from '@/utils/functions/random-related'
 
 const textCopyText = ref('Text Copied!')
 
