@@ -1,11 +1,11 @@
 <template>
   <rndm-header ref="header">Randomize any phrase</rndm-header>
   <section class="content">
-    <section class="main-container">
+    <section class="content__main">
       <rndm-textarea ref="textarea" @keydown.enter="randomizeOutput(input)" v-model="input" />
       <rndm-button ref="button" @click="randomizeOutput(input)">Randomize text</rndm-button>
+      <output-handler :output="output" />
     </section>
-    <output-handler :output="output" />
   </section>
 </template>
 
@@ -46,18 +46,18 @@ const randomizeElems = (): void => {
 </script>
 
 <style lang="scss" scoped>
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: var(--item-aligning);
-  gap: 3rem;
-  margin-bottom: 3rem;
-  width: 100%;
-}
 .content {
   display: flex;
   flex-direction: column;
   align-items: var(--item-aligning);
   transition: all 1.1s ease;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: var(--item-aligning);
+    gap: 3rem;
+    width: 100%;
+  }
 }
 </style>

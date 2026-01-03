@@ -3,7 +3,7 @@
 @use './abstracts/mixins' as *;
 
 :root {
-  --main-padding: 4rem;
+  --main-padding: 5rem;
   --main-font-size: 1.6rem;
   --header-font-size: 3rem;
   --box-width: 60rem;
@@ -17,12 +17,6 @@
     --main-padding: 2rem;
     --item-aligning: center;
     --output-aligning: center;
-
-    /* iPhone-specific adjustments */
-    @supports (padding-top: env(safe-area-inset-top)) {
-      --main-font-size: 1rem;
-      --header-font-size: 2rem;
-    }
   }
 
   --color-primary-rgb: var(--color-primary-r), var(--color-primary-g), var(--color-primary-b);
