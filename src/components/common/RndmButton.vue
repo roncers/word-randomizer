@@ -28,7 +28,7 @@ const randomizeElems = async (): Promise<void> => {
     disabled.value = false
   }, 2000)
 }
-defineExpose({ randomizeElems })
+defineExpose({ randomizeElems, disabled })
 </script>
 
 <style lang="scss" scoped>

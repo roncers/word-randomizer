@@ -2,7 +2,7 @@
   <rndm-header ref="header">Randomize any phrase</rndm-header>
   <section class="content">
     <section class="main-container">
-      <rndm-textarea ref="textarea" v-model="input" />
+      <rndm-textarea ref="textarea" @keydown.enter="randomizeOutput(input)" v-model="input" />
       <rndm-button ref="button" @click="randomizeOutput(input)">Randomize text</rndm-button>
     </section>
     <output-handler :output="output" />
@@ -22,6 +22,7 @@ const input = ref<string>('')
 const output = ref<string>('')
 
 const randomizeOutput = async (phrase: string) => {
+  if (button.value?.disabled) return
   randomizeElems()
   output.value = ''
   setTimeout(async () => {
