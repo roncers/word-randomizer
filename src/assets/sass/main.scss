@@ -68,7 +68,8 @@ body {
   font-size: var(--main-font-size);
   transition:
     --color-secondary 1.5s ease,
-    --color-primary 1.5s ease;
+    --color-primary 1.5s ease,
+    --color-tertiary 2s ease-in;
 }
 
 button {
