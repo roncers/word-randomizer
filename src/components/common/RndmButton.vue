@@ -36,7 +36,6 @@ defineExpose({ randomizeElems })
   max-width: 20rem;
   background-color: var(--color-tertiary);
   font-size: 2rem;
-  margin-bottom: 1rem;
   padding: 0.5rem;
   transition: all 0.4s ease-in;
   @media (hover: hover) {

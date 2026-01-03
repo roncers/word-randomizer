@@ -74,7 +74,7 @@ const copyToClipboard = () => {
     align-items: center;
     justify-content: var(--output-aligning);
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     .copied {
       color: rgba(var(--color-contrast-rgb), 0.3);
