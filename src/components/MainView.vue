@@ -52,6 +52,7 @@ const randomizeElems = (): void => {
   align-items: var(--item-aligning);
   gap: 3rem;
   margin-bottom: 3rem;
+  width: 100%;
 }
 .content {
   display: flex;

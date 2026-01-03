@@ -17,6 +17,12 @@
     --main-padding: 2rem;
     --item-aligning: center;
     --output-aligning: center;
+
+    /* iPhone-specific adjustments */
+    @supports (padding-top: env(safe-area-inset-top)) {
+      --main-font-size: 1rem;
+      --header-font-size: 2rem;
+    }
   }
 
   --color-primary-rgb: var(--color-primary-r), var(--color-primary-g), var(--color-primary-b);
@@ -56,6 +62,8 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   overflow-y: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {

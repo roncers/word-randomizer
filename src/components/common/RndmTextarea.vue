@@ -45,7 +45,7 @@ defineExpose({ randomizeElems })
   min-height: 4.5rem;
   min-width: 10rem;
   max-width: 100%;
-  width: var(--box-width);
+  width: min(var(--box-width), 100%);
   height: 15rem;
   border-radius: 0.8rem;
   padding: 1.2rem;

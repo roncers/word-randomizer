@@ -68,13 +68,18 @@ const copyToClipboard = () => {
 
 <style lang="scss" scoped>
 .output {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--item-aligning);
+  gap: 3rem;
   &__header {
+    width: min(var(--box-width), 100%);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: var(--output-aligning);
     gap: 1rem;
-    margin-bottom: 3rem;
 
     .copied {
       color: rgba(var(--color-contrast-rgb), 0.3);
@@ -92,7 +97,7 @@ const copyToClipboard = () => {
     transition:
       --color-quinary-rgb 3s ease-in,
       --color-quinary 3s ease-in;
-    width: var(--box-width);
+    width: min(var(--box-width), 100%);
     max-width: 100%;
     max-height: 20rem;
     border-radius: 0.8rem;
