@@ -73,7 +73,7 @@ const copyToClipboard = () => {
     display: flex;
     align-items: center;
     justify-content: var(--output-aligning);
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 
     .copied {

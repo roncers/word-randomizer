@@ -58,15 +58,16 @@ watch(
 
   &__text {
     position: absolute;
-    left: v-bind('`calc(-${props.outputWidth}px - ${textWidth}px - 2rem - 1rem)`');
+    left: v-bind('`calc(-${props.outputWidth}px - ${textWidth}px - 1rem - 1rem)`');
+    font-size: 1.4rem;
     @include respond(phone) {
       left: auto;
-      right: v-bind('`calc( -${textWidth}px - 1rem)`');
+      right: v-bind('`calc( -${textWidth}px - .5rem)`');
+      font-size: 1.2rem;
     }
     top: 50%;
     transform: translateY(-50%);
     white-space: nowrap;
-    font-size: 1.4rem;
     color: rgba(var(--color-contrast-rgb), 0.6);
   }
 
