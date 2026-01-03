@@ -96,7 +96,7 @@ const copyToClipboard = () => {
     max-width: 100%;
     max-height: 20rem;
     border-radius: 0.8rem;
-    padding: 2rem;
+    padding: 1.2rem;
     border: 1px solid color-mix(in srgb, var(--color-quinary), var(--color-contrast) 20%);
     overflow: auto;
   }
