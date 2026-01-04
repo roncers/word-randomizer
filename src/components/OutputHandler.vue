@@ -86,9 +86,7 @@ const copyToClipboard = () => {
     }
   }
   &__box {
-    display: flex;
     flex-direction: column;
-    gap: 2rem;
     background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.164),
@@ -99,7 +97,7 @@ const copyToClipboard = () => {
       --color-quinary 3s ease-in;
     width: min(var(--box-width), 100%);
     max-width: 100%;
-    max-height: 20rem;
+    max-height: 15rem;
     border-radius: 0.8rem;
     padding: 1.2rem;
     border: 1px solid color-mix(in srgb, var(--color-quinary), var(--color-contrast) 20%);
