@@ -1,6 +1,6 @@
 # Word Randomizer
 
-A creative web application built with Vue 3 that takes your text input and scrambles the order of the words. Perfect for creative writing prompts, games, or just for fun!
+A creative web application built with Vue 3 that takes your text input and scrambles the order of the words. Perfect for creative writing prompts, games, or just for fun! Use with caution: may jumble your words, give your screen a psychedelic makeover and break some page texts. It's not a bug, it's a feature! 🎨
 
 <div align="center">
 
@@ -10,8 +10,11 @@ A creative web application built with Vue 3 that takes your text input and scram
 
 ## 📸 Demo
 
-<!-- Add a screenshot or GIF of your application here -->
-<!-- ![Demo Screenshot](path/to/screenshot.png) -->
+## ![Demonstration GIF](public/readme/video.gif)
+
+## ![Demo Screenshot desktop](public/readme/example-desktop.png)
+
+## ![Demo Screenshot phone](public/readme/example-phone.png)
 
 ## 🌟 Features
 
