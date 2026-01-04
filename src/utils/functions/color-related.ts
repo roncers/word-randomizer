@@ -9,7 +9,7 @@ const setCssColor = (name: ColorName, [r, g, b]: [number, number, number]): void
 }
 
 export function backgroundColorShift(): void {
-  const newPalette = Math.random() < 0.5 ? palette1 : palette2
+  const newPalette = Math.random() < 0.6 ? palette1 : palette2
 
   setCssColor('primary', newPalette.primary)
   setCssColor('secondary', newPalette.secondary)

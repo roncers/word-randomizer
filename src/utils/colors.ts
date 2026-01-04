@@ -17,9 +17,9 @@ export const palette1: ColorPalette = {
 export const palette2: ColorPalette = {
   primary: [220, 130, 189],
   secondary: [233, 200, 150],
-  tertiary: [150, 200, 200],
-  quinary: [223, 190, 0],
-  buttonMix: 'aqua',
+  tertiary: [255, 127, 80],
+  quinary: [255, 221, 26],
+  buttonMix: 'orange',
 }
 
 // Define which palette is the default
