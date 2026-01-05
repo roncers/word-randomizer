@@ -10,11 +10,11 @@ A creative web application built with Vue 3 that takes your text input and scram
 
 ## 📸 Demo
 
-## ![Demonstration GIF](public/readme/video.gif)
+## ![Demonstration GIF](readme-assets/video.gif)
 
-## ![Demo Screenshot desktop](public/readme/example-desktop.png)
+## ![Demo Screenshot desktop](readme-assets/example-desktop.png)
 
-## ![Demo Screenshot phone](public/readme/example-phone.png)
+## ![Demo Screenshot phone](readme-assets/example-phone.png)
 
 ## 🌟 Features
 
