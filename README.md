@@ -4,7 +4,7 @@ A creative web application built with Vue 3 that takes your text input and scram
 
 <div align="center">
 
-#### &rarr; &rarr; &rarr; &rarr; [Test the App Here](https://martin-roncero/word-randomizer/) &larr; &larr; &larr; &larr;
+#### &rarr; &rarr; &rarr; &rarr; [Test the App Here](https://martin-roncero.com/word-randomizer/) &larr; &larr; &larr; &larr;
 
 </div>
 
