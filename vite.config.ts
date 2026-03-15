@@ -19,5 +19,5 @@ export default defineConfig({
       },
     },
   },
-  base: '/word-randomizer/',
+  base: '/',
 })
